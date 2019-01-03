@@ -1,0 +1,10 @@
+<app-item-detail [item]="selectedItem"></app-item-detail>
+
+<h2>Lista de Itens</h2>
+<ul class="itens">
+  <li *ngFor="let item of itens"
+  [class.selected]="item === selectedItem"
+  (click)="onSelect(item)" >
+    <span class="badge">{{ item.codigo }}</span> {{ item.nome }}
+  </li>
+</ul>
